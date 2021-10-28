@@ -1,0 +1,194 @@
+html, body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #0a2240;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+h1 {
+  font-weight: bold !important;
+}
+
+.password-wrapper {
+  position: relative;
+  box-shadow: 0 0 15px 0px #00000042;
+  padding: 25px 40px 30px 40px;
+  border-radius: 5px;
+  border: 1px solid #0000001c;
+}
+
+.password-input {
+  width: 89%;
+  height: 46px;
+  border: none;
+  outline: none;
+  font-size: 36px;
+  color: #0a2240;
+}
+
+.password-strength {
+  position: absolute;
+  background: #fff;
+  height: 12px;
+  left: -1px;
+  right: 0px;
+  bottom: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  transition: .3s;
+}
+
+.password-strength.weak {
+  background: #d22d27;
+}
+
+.password-strength.base {
+  background: #d27e27;
+}
+
+.password-strength.normal {
+  background: #98d227;
+}
+
+.password-strength.strong {
+  background: #27d244;
+}
+
+.checkbox-wrapper {
+  display: flex;
+}
+
+.password-controls {
+  display: flex;
+  position: absolute;
+  right: 40px;
+  top: 32px;
+}
+
+.password-controls:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -35px;
+  z-index: 1;
+  width: 30px;
+  height: 95%;
+  pointer-events: none;
+  background: -webkit-gradient(linear,left top,right top,from(hsla(0,0%,100%,0)),to(#fff));
+  background: linear-gradient( 
+90deg
+,hsla(0,0%,100%,0) 0,#fff);
+}
+
+.copy, .generate {
+  font-size: 22px;
+  cursor: pointer;
+  color: #000000b0;
+  transition: .3s;
+}
+
+.rotate-360 {
+  animation-duration: .5s;
+  animation-name: rotate;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.generate {
+  margin-left: 15px;
+}
+
+.copy:hover, .generate:hover {
+  color: #0a2240;
+}
+
+.slider {
+  width: 100%;
+  padding: 0 0px;
+}
+.slider input {
+  background: linear-gradient(to right, #d22d27 0%, #d22d27 50%, #eaeefb 50%, #eaeefb 100%);
+  border-radius: 8px;
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
+  outline: none;
+  transition: all 450ms ease-in;
+  -webkit-appearance: none;
+}
+.slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url(../icon-slider.svg) #d22d27 center no-repeat;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+.slider input::-webkit-slider-thumb:hover {
+  background: url(../icon-slider.svg) #d22d27 center no-repeat;
+}
+.slider input::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  background: url(../icon-slider.svg) #d22d27 center no-repeat;
+}
+
+/* custom checkbox */
+input[type="checkbox"] {
+  height: 23px;
+  width: 23px;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  appearance: none;
+  border: 2px solid #d22d27;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked {
+  border: 2px solid #d22d27;
+  background: #d22d27;
+}
+
+input[type="checkbox"]:checked:before, input[type="checkbox"]:checked:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #fff;
+}
+  
+input[type="checkbox"]:checked:before {
+  width: 8px;
+  top: 11px;
+  left: 2px;
+  transform: rotate(44deg);
+}
+
+input[type="checkbox"]:checked:after {
+  width: 14px;
+  top: 8px;
+  left: 5px;
+  transform: rotate(-55deg);
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+}

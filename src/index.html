@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Password Generator</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/sticky-footer.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  </head>
+  <body>
+
+    <main role="main" class="container">
+      <h1 class="mt-5">Password Generator</h1>
+      <p class="lead">Here you can generate a strong password!</p>
+      
+      <div class="mt-5">
+        <div class="password-wrapper">
+          <input type="text" name="password" class="password-input" value="HvCnyFi$6aXu">
+          <div class="password-strength weak"></div>
+          <div class="password-controls">
+            <div class="copy">
+              <i class="far fa-copy"></i>
+            </div>
+            
+            <div class="generate">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="password-wrapper mt-3 mb-5">
+          <h2>Customize your password</h2>
+          <hr>
+
+          <div class="row">
+            <div class="col-md-9">
+              Password Length: <span class="length">12</span>
+              <div class="slider mt-3">
+                <input type="range" min="4" max="32" value="12" id="slider">
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" name="numbers" checked> <span>Numbers</span>
+              </label>
+              <label class="checkbox-wrapper mt-2">
+                <input type="checkbox" name="symbols" checked> <span>Symbols</span>
+              </label>
+              <label class="checkbox-wrapper mt-2">
+                <input type="checkbox" name="uppercase" checked> <span>Uppercase</span>
+              </label>
+              <label class="checkbox-wrapper mt-2">
+                <input type="checkbox" name="lowercase" checked> <span>Lowercase</span>
+              </label>
+            </div>
+          </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Password Generator by Exedl</span>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <script src="Generator.js"></script>
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
